@@ -1,6 +1,6 @@
 package nl.kolvoort.udemy.spring5.console;
 
-import nl.kolvoort.udemy.spring5.config.AppConfig;
+import nl.kolvoort.udemy.spring5.config.GameConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -15,7 +15,7 @@ public class Main {
 
         // Create context (container)
         ConfigurableApplicationContext context
-                = new AnnotationConfigApplicationContext(AppConfig.class);
+                = new AnnotationConfigApplicationContext(GameConfig.class);
 
         // Close context (container)
         context.close();

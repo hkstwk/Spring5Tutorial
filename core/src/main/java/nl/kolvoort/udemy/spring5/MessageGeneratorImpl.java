@@ -3,22 +3,29 @@ package nl.kolvoort.udemy.spring5;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
+@Component
 public class MessageGeneratorImpl implements MessageGenerator {
 
     // Constants
     private static final Logger log = LoggerFactory.getLogger(MessageGeneratorImpl.class);
 
     // Fields
-    @Autowired
-    private Game game;
+    private final Game game;
 
     // init method
     @PostConstruct
     public void init() {
         log.debug("game is {}", game);
+    }
+
+    // constructors
+    @Autowired
+    public MessageGeneratorImpl(Game game) {
+        this.game = game;
     }
 
     // public methods
