@@ -31,7 +31,7 @@ public class GameImpl implements Game {
 
     // constructor
     @Autowired
-    public GameImpl(NumberGenerator numberGenerator, @GuessCount int guessCount) {
+    public GameImpl(NumberGenerator numberGenerator, int guessCount) {
         this.numberGenerator = numberGenerator;
         this.guessCount = guessCount;
     }
