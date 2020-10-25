@@ -9,6 +9,7 @@ import nl.kolvoort.udemy.spring5.util.ViewNames;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -44,6 +45,13 @@ public class GameController {
     public String procesMessage(@RequestParam int guess){
         log.info("guess = {}", guess);
         gameService.checkGuess(guess);
+        return GameMapping.REDIRECT_PLAY;
+    }
+
+    @GetMapping(GameMapping.RESTART)
+    public String restart(){
+        log.info("restart() called --- initializing new game");
+        gameService.reset();
         return GameMapping.REDIRECT_PLAY;
     }
 }

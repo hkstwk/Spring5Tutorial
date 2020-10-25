@@ -55,5 +55,6 @@ public class GameServiceImpl implements GameService {
     @Override
     public void reset() {
         game.reset();
+        this.init();
     }
 }
