@@ -1,0 +1,12 @@
+<thlogic>
+    <attr sel="#header"
+          th:replace="~{fragments/head :: headFragment}"/>
+    <attr sel="#resultMessage"
+          th:text="${__${T(nl.kolvoort.udemy.spring5.util.AttributeNames).RESULT_MESSAGE}__}"/>
+    <attr sel="#play-again"
+          th:href="@{__${T(nl.kolvoort.udemy.spring5.util.GameMapping).RESTART}__}"/>
+    <attr sel="#home"
+          th:href="@{__${T(nl.kolvoort.udemy.spring5.util.GameMapping).HOME}__}"/>
+    <attr sel="#footer"
+          th:replace="~{fragments/footer :: footerFragment}"/>
+</thlogic>

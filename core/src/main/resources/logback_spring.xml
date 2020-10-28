@@ -1,7 +1,8 @@
 <configuration>
 
-    <include resource="org/springframework/boot/logging/logback/base.xml"/>
-    <logger name="nl.kolvoort.udemy.spring5" level="DEBUG"/>
+    <include resource="org.springframework.boot.logging.logback.base.xml"/>
+    <logger name="nl.kolvoort.udemy.spring5" level="TRACE"/>
     <logger name="org.springframework" level="TRACE"/>
+    <logger name="org.thymeleaf" level="TRACE"/>
 
 </configuration>

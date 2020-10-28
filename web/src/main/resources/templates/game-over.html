@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/head :: headFragment}">
+<html lang="en">
+<head id="header">
     <meta charset="UTF-8">
     <title>Game Over title</title>
 </head>
@@ -8,20 +8,20 @@
     <div align="center">
         <h1>Guess the Number Game</h1>
         <h2>***** Game over *****</h2>
-        <h3 th:text="${__${T(nl.kolvoort.udemy.spring5.util.AttributeNames).RESULT_MESSAGE}__}">
+        <h3 id="resultMessage">
             Result Message Content
         </h3>
         <h3>
-            <a th:href="@{__${T(nl.kolvoort.udemy.spring5.util.GameMapping).RESTART}__}">
+            <a id="play-again">
                 Play Again
             </a>
         </h3>
         <h3>
-            <a th:href="@{__${T(nl.kolvoort.udemy.spring5.util.GameMapping).HOME}__}">
+            <a id="home">
                 Home
             </a>
         </h3>
-        <footer th:replace="~{fragments/footer :: footerFragment}"><p>Footer placeholder</p></footer>
+        <footer id="footer"><p>Footer placeholder</p></footer>
     </div>
 </body>
 </html>
